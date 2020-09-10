@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% block content %}
+<html>
+  <head>
+
+    <style type="text/css">  
+      body {
+        background-image:url('../../static/bg.jpg');
+        background-size: cover; 
+        background-repeat: no-repeat;  
+        background-position: center;     
+      }
+    </style>
+
+  </head>
+  
+  <body>
+
+    <p class="p1">Image Compression<br>Huffman Coding</p>
+    
+    <div class="content-section">
+    
+      <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data" id="file">
+        <p>Select image:</p>
+        <p><input class = "button button1" type="file" name="fileToUpload" id="fileToUpload">
+        <input class="button button1" type="submit" value="{{ u }}" name="submit"></p>
+      </form>
+      <form action="/compressed" method="post">
+        <button class="button button1">COMPRESS!</button>
+      </form>
+      
+      <form action="/decompressed" method="post">
+        <button class="button button1">DECOMPRESS!</button>
+      </form>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script>
+        function filePreview(input) {
+          if (input.files && input.files[0]) {
+              var reader = new FileReader();
+              reader.onload = function (e) {
+                  $('#file+ img').remove();
+                  $('#file').after('<h3>Image Preview:</h3> <img src="'+e.target.result+'" width="650" height="500"/>');
+              };
+              reader.readAsDataURL(input.files[0]);
+          }
+        }
+        $("#fileToUpload").change(function () {
+          
+          filePreview(this);
+        });
+      </script>
+   
+    </div>
+  </body>
+</html>
+{% endblock %}
