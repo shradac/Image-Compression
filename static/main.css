@@ -1,0 +1,78 @@
+body {
+    background: #fafafa;
+    color: #ee1414;
+    margin-top: 5rem;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #ece5e5;
+  }
+  
+  .bg-steel {
+    background-color: #ee1414;
+  }
+  
+  .site-header .navbar-nav .nav-link {
+    color: #cbd5db;
+  }
+  
+  .site-header .navbar-nav .nav-link:hover {
+    color: #ffffff;
+  }
+  
+  .site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+  }
+  
+  .content-section {
+    background:none;
+    padding: 10px 20px;
+    padding-left:60mm;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 20px;
+        
+  }
+  
+  .button2 {
+    background-color: #ac1717;
+    color: black;
+    border: 2px solid #ee1414;
+  
+  }
+  
+  .button {
+    background-color: rgb(0, 0, 0); /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+  }
+  .button1 {
+    background-color: #ee1414; 
+    color: rgb(255, 255, 255); 
+    border: none;
+  }
+  
+  .button1:hover {
+    background-color: #bb1010;
+    color: white;
+  }
+  .p1 { 
+    color:#ffffff;
+    font-weight: bold;
+    font-size: 17mm;
+    font-style:oblique;
+    text-align: center;
+    padding-bottom: 10mm;
+    padding-top: 25mm;
+    padding-left:50mm ;
+    padding-bottom: 20mm;
+    }
